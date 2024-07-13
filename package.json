@@ -3,16 +3,26 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "bin": "dist/bin/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx bin/index.ts",
+    "test": "vitest run"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "packageManager": "pnpm@9.5.0+sha256.dbdf5961c32909fb030595a9daa1dae720162e658609a8f92f2fa99835510ca5",
   "devDependencies": {
-    "typescript": "^5.5.3"
+    "@types/node": "^20.14.10",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3",
+    "vitest": "^2.0.2"
+  },
+  "dependencies": {
+    "yaml": "^2.4.5",
+    "zod": "^3.23.8"
   }
 }
