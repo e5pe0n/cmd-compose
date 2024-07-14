@@ -4,10 +4,11 @@ import { Command } from "./command.js";
 export function run(commands: Command[]) {
   for (const command of commands) {
     const ps = spawn("/bin/sh", ["-c", command.command]);
-    ps.stdout.pipe(process.stdout);
-    ps.stderr.pipe(process.stderr);
+    ps.stdout.on("data", (data) => {
+      command.log(data);
+    });
     ps.on("close", (code) => {
-      console.log(`${command.name} exits with ${code}`);
+      command.log(`exited with ${code}`);
     });
   }
 }

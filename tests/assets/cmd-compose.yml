@@ -3,5 +3,7 @@ commands:
     command: echo 'Hello World from cmd1!'
   cmd2:
     command: echo 'Hello World from cmd2!'
-    depends_on:
-      - cmd1
+  cmd3:
+    command: echo 'Hello World from cmd3!'
+  cmd4:
+    command: echo 'Hello World from cmd4!'
