@@ -4,9 +4,9 @@ import { parser } from "../src/parser.js";
 import { run } from "../src/run.js";
 
 const content = fs.readFileSync(
-  path.join(import.meta.dirname, "../tests/assets/cmd-compose.yml"),
+  path.join(import.meta.dirname, "../tests/assets/task-compose.yml"),
   { encoding: "utf-8" }
 );
 
-const commands = parser(content);
-run(commands);
+const taskDtos = parser(content);
+run(taskDtos);

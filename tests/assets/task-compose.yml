@@ -1,0 +1,12 @@
+tasks:
+  task1:
+    command: echo 'Hello World from task1!'
+    depends_on:
+      - task2
+      - task4
+  task2:
+    command: echo 'Hello World from task2!'
+  task3:
+    command: echo 'Hello World from task3!'
+  task4:
+    command: echo 'Hello World from task4!'
